@@ -1,0 +1,1 @@
+angular-filter.min.js - https://github.com/a8m/angular-filter

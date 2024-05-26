@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	  ttp://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	  http://www.springframework.org/schema/mvc
+	  http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd" >
+
+	<bean id="asyncJob" class="br.com.usasistemas.usaplatform.job.AsyncJob">
+		<property name="productManagement" ref="productManagementBO"/>
+		<property name="messageManagement" ref="messageManagementBO"/>
+		<property name="calendarManagement" ref="calendarManagementBO"/>
+		<property name="announcementManagement" ref="announcementManagementBO"/>
+		<property name="reviewManagement" ref="reviewManagementBO"/>
+		<property name="deliveryManagement" ref="deliveryManagementBO"/>
+		<property name="fileManagement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="deliveryJob" class="br.com.usasistemas.usaplatform.job.DeliveryJob">
+		<property name="deliveryManagement" ref="deliveryManagementBO"/>
+	</bean>
+	<bean id="indexingJob" class="br.com.usasistemas.usaplatform.job.IndexingJob">
+		<property name="messageManagement" ref="messageManagementBO"/>
+		<property name="documentManagement" ref="documentManagementBO"/>
+		<property name="franchisorManagement" ref="franchisorManagementBO"/>
+	</bean>
+	<bean id="stockJob" class="br.com.usasistemas.usaplatform.job.StockJob">
+		<property name="stockManagement" ref="stockManagementBO"/>
+	</bean>
+	<bean id="reportJob" class="br.com.usasistemas.usaplatform.job.ReportJob">
+		<property name="reportManagement" ref="reportManagementBO"/>
+	</bean>
+	<bean id="mailNotificationJob" class="br.com.usasistemas.usaplatform.job.MailNotificationJob">
+		<property name="mailManegement" ref="mailManagementBO"/>
+	</bean>
+
+</beans>

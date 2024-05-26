@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	  ttp://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	  http://www.springframework.org/schema/mvc
+	  http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd" >
+
+	<bean id="announcementService" class="br.com.usasistemas.usaplatform.api.AnnouncementService">
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	  <property name="announcementManagement" ref="announcementManagementBO"/>
+	  <property name="imageManagement" ref="imageManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="calendarService" class="br.com.usasistemas.usaplatform.api.CalendarService">
+	  <property name="calendarManagement" ref="calendarManagementBO"/>
+	</bean>
+	<bean id="configurationService" class="br.com.usasistemas.usaplatform.api.ConfigurationService">
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="contactService" class="br.com.usasistemas.usaplatform.api.ContactService">
+	  <property name="mailManagement" ref="mailManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="deliveryService" class="br.com.usasistemas.usaplatform.api.DeliveryService">
+	  <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="documentsService" class="br.com.usasistemas.usaplatform.api.DocumentsService">
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	  <property name="documentManagement" ref="documentManagementBO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	</bean>
+	<bean id="franchiseesService" class="br.com.usasistemas.usaplatform.api.FranchiseesService">
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	</bean>
+	<bean id="franchisorsService" class="br.com.usasistemas.usaplatform.api.FranchisorsService">
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="imageService" class="br.com.usasistemas.usaplatform.api.ImageService">
+	    <property name="imageManagement" ref="imageManagementBO"/>
+	    <property name="productManagement" ref="productManagementBO"/>
+	    <property name="supplierManagement" ref="supplierManagementBO"/>
+	    <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	    <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	</bean>
+	<bean id="loginService" class="br.com.usasistemas.usaplatform.api.LoginService">
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="manufactureService" class="br.com.usasistemas.usaplatform.api.ManufactureService">
+	  <property name="manufactureManagement" ref="manufactureManagementBO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="messagesService" class="br.com.usasistemas.usaplatform.api.MessagesService">
+	  <property name="messageManagement" ref="messageManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="productsService" class="br.com.usasistemas.usaplatform.api.ProductsService">
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	</bean>
+	<bean id="reportService" class="br.com.usasistemas.usaplatform.api.ReportService">
+	  <property name="reportManagement" ref="reportManagementBO"/>
+	</bean>
+	<bean id="reviewService" class="br.com.usasistemas.usaplatform.api.ReviewService">
+	  <property name="reviewManagement" ref="reviewManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="setupService" class="br.com.usasistemas.usaplatform.api.SetupService">
+	  <property name="userDAO" ref="userDAO"/>
+	  <property name="userGroupDAO" ref="userGroupDAO"/>
+	  <property name="userGroupEntityUserDAO" ref="userGroupEntityUserDAO"/>
+	  <property name="administratorUserDAO" ref="administratorUserDAO"/>
+	  <property name="deliveryRequestDAO" ref="deliveryRequestDAO"/>
+	  <property name="deliveryRequestHistoryDAO" ref="deliveryRequestHistoryDAO"/>
+	  <property name="documentsFileDAO" ref="documentsFileDAO"/>
+	  <property name="documentsFolderDAO" ref="documentsFolderDAO"/>
+	  <property name="documentsFranchiseeIndexDAO" ref="documentsFranchiseeIndexDAO"/>
+	  <property name="franchiseeDAO" ref="franchiseeDAO"/>
+	  <property name="franchiseeUserDAO" ref="franchiseeUserDAO"/>
+	  <property name="franchisorDAO" ref="franchisorDAO"/>
+	  <property name="franchisorUserDAO" ref="franchisorUserDAO"/>
+	  <property name="imageDAO" ref="imageDAO"/>
+	  <property name="letsEncryptChallengeDAO" ref="letsEncryptChallengeDAO"/>
+	  <property name="manufactureRequestDAO" ref="manufactureRequestDAO"/>
+	  <property name="manufactureRequestHistoryDAO" ref="manufactureRequestHistoryDAO"/>
+	  <property name="productCategoryDAO" ref="productCategoryDAO"/>
+	  <property name="productDAO" ref="productDAO"/>
+	  <property name="productSizeDAO" ref="productSizeDAO"/>
+	  <property name="supplierDAO" ref="supplierDAO"/>
+	  <property name="supplierCategoryDAO" ref="supplierCategoryDAO"/>
+	  <property name="supplierFranchisorDAO" ref="supplierFranchisorDAO"/>
+	  <property name="supplierUserDAO" ref="supplierUserDAO"/>
+	  <property name="stateDAO" ref="stateDAO"/>
+	  <property name="cityDAO" ref="cityDAO"/>
+	  <property name="tutorialDAO" ref="tutorialDAO"/>
+	  <property name="setupDAO" ref="setupDAO"/>
+	  <property name="announcementDAO" ref="announcementDAO"/>
+	  <property name="messageTopicDAO" ref="messageTopicDAO"/>
+	  <property name="messageCommentDAO" ref="messageCommentDAO"/>
+	  <property name="notificationDAO" ref="notificationDAO"/>
+	  <property name="reviewRequestDAO" ref="reviewRequestDAO"/>
+	  <property name="timeRangeReportDAO" ref="timeRangeReportDAO"/>
+	</bean>
+	<bean id="statesAndCitiesService" class="br.com.usasistemas.usaplatform.api.StatesAndCitiesService">
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	</bean>
+	<bean id="suppliersService" class="br.com.usasistemas.usaplatform.api.SuppliersService">
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="tutorialService" class="br.com.usasistemas.usaplatform.api.TutorialService">
+	  <property name="tutorialManagement" ref="tutorialManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="trainingService" class="br.com.usasistemas.usaplatform.api.TrainingService">
+	  <property name="trainingManagement" ref="trainingManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="userService" class="br.com.usasistemas.usaplatform.api.UserService">
+	  <property name="userManagement" ref="userManagementBO"/>
+	</bean>
+
+</beans>

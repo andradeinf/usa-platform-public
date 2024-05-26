@@ -1,0 +1,48 @@
+{
+    "env": {
+       "es6": true,
+       "browser": true,
+       "node": true,
+       "jquery": true
+    },
+    "extends" : "airbnb",
+    "rules" : {
+       "no-tabs": "off", 
+       "no-mixed-spaces-and-tabs": "off", 
+       "func-names": "off", 
+       "eqeqeq": "off", 
+       "max-len": "off", 
+       "vars-on-top": "off", 
+       "no-unused-vars": "off", 
+       "no-use-before-define": "off", 
+       "no-plusplus": "off", 
+       "no-param-reassign": "off", 
+       "prefer-destructuring": "off", 
+       "no-nested-ternary": "off", 
+       "no-console": "off", 
+       "no-lonely-if": "off", 
+       "block-scoped-var": "off", 
+       "no-var": "off", 
+       "no-shadow": "off", 
+       "no-restricted-syntax": "off", 
+       "guard-for-in": "off", 
+       "no-redeclare": "off", 
+       "no-new-object": "off" 
+    }, 
+    "globals" : { 
+       "angular": "readonly", 
+       "NotificationUtil": "readonly", 
+       "LoadingUtil": "readonly", 
+       "gSupplierId": "readonly", 
+       "gUserId": "readonly", 
+       "formatCurrencyValue": "readonly", 
+       "gSiteName": "readonly", 
+       "gFranchiseeId": "readonly", 
+       "gFranchisorId": "readonly", 
+       "gLoginForm": "readonly", 
+       "gHasStockControl": "readonly", 
+       "gFranchiseeUserId": "readonly", 
+       "ConfirmationUtil": "readonly", 
+       "gFranchisorImage": "readonly" 
+    } 
+}

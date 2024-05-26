@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	  ttp://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	  http://www.springframework.org/schema/mvc
+	  http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd" >
+
+	<bean id="announcementManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.AnnouncementManagementBOImpl">
+	  <property name="announcementDAO" ref="announcementDAO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="notificationManagement" ref="notificationManagementBO"/>
+	</bean>
+	<bean id="calendarManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.CalendarManagementBOImpl">
+	    <property name="calendarEventDAO" ref="calendarEventDAO"/>
+	    <property name="calendarEventHistoryDAO" ref="calendarEventHistoryDAO"/>
+	    <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	    <property name="mailManagement" ref="mailManagementBO"/>
+	</bean>
+	<bean id="configurationManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ConfigurationManagementBOImpl">
+	    <property name="systemConfigurationDAO" ref="systemConfigurationDAO"/>
+	</bean>
+	<bean id="documentManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.DocumentManagementBOImpl">
+	  <property name="documentsFileDAO" ref="documentsFileDAO"/>
+	  <property name="documentsFolderDAO" ref="documentsFolderDAO"/>
+	  <property name="documentsFranchiseeIndexDAO" ref="documentsFranchiseeIndexDAO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="fileManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.FileManagementBOImpl">
+	  <property name="fileDAO" ref="fileDAO"/>
+	  <property name="uploadedFileDAO" ref="uploadedFileDAO"/>
+	</bean>
+	<bean id="deliveryManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.DeliveryManagementBOImpl">
+	  <property name="deliveryRequestDAO" ref="deliveryRequestDAO"/>
+	  <property name="deliveryRequestHistoryDAO" ref="deliveryRequestHistoryDAO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	  <property name="mailManegement" ref="mailManagementBO"/>
+	  <property name="fileManegement" ref="fileManagementBO"/>
+	</bean>
+	<bean id="franchiseeManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.FranchiseeManagementBOImpl">
+	  <property name="franchiseeDAO" ref="franchiseeDAO"/>
+	  <property name="franchiseeUserDAO" ref="franchiseeUserDAO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	  <property name="imageManagement" ref="imageManagementBO"/>
+	</bean>
+	<bean id="franchisorManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.FranchisorManagementBOImpl">
+	  <property name="franchisorDAO" ref="franchisorDAO"/>
+	  <property name="franchisorUserDAO" ref="franchisorUserDAO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="imageManagement" ref="imageManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	</bean>
+	<bean id="imageManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ImageManagementBOImpl">
+	  <property name="imageDAO" ref="imageDAO"/>
+	</bean>
+	<bean id="mailManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.MailManagementBOImpl">
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="documentManagement" ref="documentManagementBO"/>
+	  <property name="notificationManagement" ref="notificationManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="manufactureManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ManufactureManagementBOImpl">
+	  <property name="manufactureRequestDAO" ref="manufactureRequestDAO"/>
+	  <property name="manufactureRequestHistoryDAO" ref="manufactureRequestHistoryDAO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	</bean>
+	<bean id="messageManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.MessageManagementBOImpl">
+	  <property name="messageTopicDAO" ref="messageTopicDAO"/>
+	  <property name="messageTopicLabelDAO" ref="messageTopicLabelDAO"/>
+	  <property name="messageCommentDAO" ref="messageCommentDAO"/>
+	  <property name="messageAttachmentDAO" ref="messageAttachmentDAO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	  <property name="notificationManagement" ref="notificationManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	  <property name="mailManagement" ref="mailManagementBO"/>
+	</bean>
+	<bean id="notificationManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.NotificationManagementBOImpl">
+	  <property name="notificationDAO" ref="notificationDAO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	</bean>
+	<bean id="productManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ProductManagementBOImpl">
+	  <property name="productDAO" ref="productDAO"/>
+	  <property name="productSizeDAO" ref="productSizeDAO"/>
+	  <property name="productSizePriceHistoryDAO" ref="productSizePriceHistoryDAO"/>
+	  <property name="productCategoryDAO" ref="productCategoryDAO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	  <property name="manufactureManagement" ref="manufactureManagementBO"/>
+	  <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	  <property name="imageManagement" ref="imageManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="fileManagement" ref="fileManagementBO"/>
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	</bean>
+	<bean id="reportManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ReportManagementBOImpl">
+		<property name="timeRangeReportDAO" ref="timeRangeReportDAO"/>
+		<property name="fileManagement" ref="fileManagementBO"/>
+		<property name="deliveryManagement" ref="deliveryManagementBO"/>
+		<property name="productManagement" ref="productManagementBO"/>
+		<property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+		<property name="franchisorManagement" ref="franchisorManagementBO"/>
+		<property name="supplierManagement" ref="supplierManagementBO"/>
+		<property name="messageManagement" ref="messageManagementBO"/>
+		<property name="userManagement" ref="userManagementBO"/>
+	</bean>
+	<bean id="reviewManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.ReviewManagementBOImpl">
+		<property name="reviewRequestDAO" ref="reviewRequestDAO"/>
+		<property name="supplierManagement" ref="supplierManagementBO"/>
+	    <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	</bean>
+	<bean id="stateAndCityManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.StateAndCityManagementBOImpl">
+	  <property name="stateDAO" ref="stateDAO"/>
+	  <property name="cityDAO" ref="cityDAO"/>
+	</bean>
+	<bean id="stockManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.StockManagementBOImpl">
+	  <property name="stockConsolidationDAO" ref="stockConsolidationDAO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	  <property name="manufactureManagement" ref="manufactureManagementBO"/>
+	  <property name="deliveryManagement" ref="deliveryManagementBO"/>
+	  <property name="reviewManagement" ref="reviewManagementBO"/>
+	  <property name="configurationManagement" ref="configurationManagementBO"/>
+	</bean>
+	<bean id="supplierManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.SupplierManagementBOImpl">
+	  <property name="supplierDAO" ref="supplierDAO"/>
+	  <property name="supplierUserDAO" ref="supplierUserDAO"/>
+	  <property name="supplierFranchisorDAO" ref="supplierFranchisorDAO"/>
+	  <property name="supplierCategoryDAO" ref="supplierCategoryDAO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	  <property name="stateAndCityManagement" ref="stateAndCityManagementBO"/>
+	  <property name="imageManagement" ref="imageManagementBO"/>
+	  <property name="productManagement" ref="productManagementBO"/>
+	</bean>
+	<bean id="tutorialManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.TutorialManagementBOImpl">
+	  <property name="tutorialDAO" ref="tutorialDAO"/>
+	</bean>
+	<bean id="trainingManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.TrainingManagementBOImpl">
+	  <property name="trainingDAO" ref="trainingDAO"/>
+	  <property name="trainingViewControlDAO" ref="trainingViewControlDAO"/>
+	  <property name="fileManegement" ref="fileManagementBO"/>
+  	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="userManagement" ref="userManagementBO"/>
+	</bean>
+	<bean id="userManagementBO" class="br.com.usasistemas.usaplatform.bizo.impl.UserManagementBOImpl">
+	  <property name="userDAO" ref="userDAO"/>
+	  <property name="administratorUserDAO" ref="administratorUserDAO"/>
+	  <property name="franchiseeUserDAO" ref="franchiseeUserDAO"/>
+	  <property name="franchisorUserDAO" ref="franchisorUserDAO"/>
+	  <property name="supplierUserDAO" ref="supplierUserDAO"/>
+	  <property name="userGroupDAO" ref="userGroupDAO"/>
+	  <property name="userGroupEntityUserDAO" ref="userGroupEntityUserDAO"/>
+	  <property name="passwordResetDAO" ref="passwordResetDAO"/>
+	  <property name="mailManagement" ref="mailManagementBO"/>
+	  <property name="supplierManagement" ref="supplierManagementBO"/>
+	  <property name="franchisorManagement" ref="franchisorManagementBO"/>
+	  <property name="franchiseeManagement" ref="franchiseeManagementBO"/>
+	</bean>
+
+</beans>

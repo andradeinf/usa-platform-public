@@ -1,0 +1,44 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+/junit-report/
+node_modules/
+src/main/webapp/app/scripts/
+appengine/*.json
+
+src/main/webapp/WEB-INF/tags/masterpage.tag
+src/main/webapp/WEB-INF/jsp/admin/home.jsp
+src/main/webapp/WEB-INF/jsp/franchisee/home.jsp
+src/main/webapp/WEB-INF/jsp/franchisor/home.jsp
+src/main/webapp/WEB-INF/jsp/login/home.jsp
+src/main/webapp/WEB-INF/jsp/supplier/home.jsp
+src/main/webapp/WEB-INF/jsp/supplier/deliveryRequestsPrint.jsp
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/

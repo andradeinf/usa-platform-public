@@ -1,0 +1,341 @@
+indexes:
+- kind: Announcement
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: desc
+    name: date
+- kind: CalendarEvent
+  properties:
+  - direction: asc
+    name: entityId
+  - direction: asc
+    name: fromHour
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: productId
+  - direction: desc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: desc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: productId
+  - direction: asc
+    name: franchiseeId
+  - direction: desc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: status
+  - direction: desc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: status
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: domainKey
+  - direction: asc
+    name: updateDate
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: status
+  - direction: desc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: dueDate
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: dueDate
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: date
+- kind: DeliveryRequest
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: productId
+  - direction: desc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: desc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: productId
+  - direction: asc
+    name: franchiseeId
+  - direction: desc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: status
+  - direction: desc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: dueDate
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: dueDate
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: franchiseeId
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: date
+- kind: DeliveryRequestHistory
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: date
+- kind: DocumentsFile
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: asc
+    name: folderId
+- kind: DocumentsFolder
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: asc
+    name: parentId
+- kind: ManufactureRequest
+  properties:
+  - direction: asc
+    name: productId
+  - direction: desc
+    name: date
+- kind: ManufactureRequest
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: desc
+    name: date
+- kind: ManufactureRequest
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: status
+- kind: ManufactureRequest
+  properties:
+  - direction: asc
+    name: domainKey
+  - direction: asc
+    name: updateDate
+- kind: ManufactureRequestHistory
+  properties:
+  - direction: asc
+    name: productId
+  - direction: desc
+    name: date
+- kind: ManufactureRequestHistory
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: desc
+    name: date
+- kind: MessageAttachment
+  properties:
+  - direction: asc
+    name: messageCommentId
+  - direction: asc
+    name: date
+- kind: MessageTopicLabel
+  properties:
+  - direction: asc
+    name: entityUserId
+  - direction: asc
+    name: name
+- kind: Notification
+  properties:
+  - direction: asc
+    name: userId
+  - direction: asc
+    name: entityId
+  - direction: asc
+    name: type
+  - direction: asc
+    name: isRead
+- kind: Notification
+  properties:
+  - direction: asc
+    name: referenceId
+  - direction: asc
+    name: userId
+  - direction: asc
+    name: entityId
+  - direction: asc
+    name: isRead
+- kind: Notification
+  properties:
+  - direction: asc
+    name: referenceId2
+  - direction: asc
+    name: userId
+  - direction: asc
+    name: entityId
+- kind: Notification
+  properties:
+  - direction: asc
+    name: notificationStatus
+  - direction: asc
+    name: type
+  - direction: asc
+    name: domainKey
+- kind: Notification
+  properties:
+  - direction: asc
+    name: referenceId
+  - direction: asc
+    name: entityId
+- kind: Notification
+  properties:
+  - direction: asc
+    name: isRead
+  - direction: asc
+    name: type
+  - direction: desc
+    name: date
+- kind: Product
+  properties:
+  - direction: asc
+    name: franchisorId
+  - direction: asc
+    name: productCategoryId
+- kind: Product
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: franchisorId
+- kind: Product
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: productCategoryId
+- kind: ProductSize
+  properties:
+  - direction: asc
+    name: productId
+  - direction: asc
+    name: isActive
+- kind: ProductSizePriceHistory
+  properties:
+  - direction: asc
+    name: productId
+  - direction: desc
+    name: date
+- kind: ReviewRequest
+  properties:
+  - direction: asc
+    name: fromEntityId
+  - direction: asc
+    name: status
+  - direction: asc
+    name: date
+- kind: ReviewRequest
+  properties:
+  - direction: asc
+    name: reviewerUserId
+  - direction: asc
+    name: reviewerDate
+- kind: Supplier
+  properties:
+  - direction: asc
+    name: categoryId
+  - direction: asc
+    name: visibility
+- kind: SupplierFranchisor
+  properties:
+  - direction: asc
+    name: supplierId
+  - direction: asc
+    name: franchisorId
+- kind: TimeRangeReport
+  properties:
+  - direction: asc
+    name: type
+  - direction: asc
+    name: entityProfile
+  - direction: asc
+    name: entityId
+- kind: TrainingViewControl
+  properties:
+  - direction: asc
+    name: trainingId
+  - direction: asc
+    name: franchiseeId
+- kind: TrainingViewControl
+  properties:
+  - direction: asc
+    name: trainingId
+  - direction: asc
+    name: franchiseeUserId
+- kind: Tutorial
+  properties:
+  - direction: asc
+    name: userProfile
+  - direction: asc
+    name: domainKeys
+- kind: UserGroupEntityUser
+  properties:
+  - direction: asc
+    name: userGroupId
+  - direction: asc
+    name: entityUserId

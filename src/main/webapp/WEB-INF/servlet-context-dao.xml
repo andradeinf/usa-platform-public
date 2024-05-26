@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	  ttp://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	  http://www.springframework.org/schema/mvc
+	  http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd" >
+
+	<bean id="administratorUserDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEAdministratorUserDAOImpl" />
+	<bean id="announcementDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEAnnouncementDAOImpl" />
+	<bean id="calendarEventDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAECalendarEventDAOImpl" />
+	<bean id="calendarEventHistoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAECalendarEventHistoryDAOImpl" />
+	<bean id="cityDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAECityDAOImpl" />
+	<bean id="deliveryRequestDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEDeliveryRequestDAOImpl" />
+	<bean id="deliveryRequestHistoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEDeliveryRequestHistoryDAOImpl" />
+	<bean id="documentsFileDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEDocumentsFileDAOImpl" />
+	<bean id="documentsFolderDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEDocumentsFolderDAOImpl" />
+	<bean id="documentsFranchiseeIndexDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEDocumentsFranchiseeIndexDAOImpl" />
+	<bean id="fileDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEFileDAOImpl" />	
+	<bean id="franchiseeDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEFranchiseeDAOImpl" />
+	<bean id="franchiseeUserDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEFranchiseeUserDAOImpl" />
+	<bean id="franchisorDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEFranchisorDAOImpl" />
+	<bean id="franchisorUserDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEFranchisorUserDAOImpl" />
+	<bean id="imageDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEImageDAOImpl" />
+	<bean id="letsEncryptChallengeDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAELetsEncryptChallengeDAOImpl" />
+	<bean id="manufactureRequestDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEManufactureRequestDAOImpl" />
+	<bean id="manufactureRequestHistoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEManufactureRequestHistoryDAOImpl" />
+	<bean id="messageAttachmentDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEMessageAttachmentDAOImpl" />
+	<bean id="messageCommentDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEMessageCommentDAOImpl" />
+	<bean id="messageTopicDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEMessageTopicDAOImpl" />
+	<bean id="messageTopicLabelDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEMessageTopicLabelDAOImpl" />
+	<bean id="notificationDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAENotificationDAOImpl" />
+	<bean id="passwordResetDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEPasswordResetDAOImpl" />
+	<bean id="productCategoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEProductCategoryDAOImpl" />
+	<bean id="productDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEProductDAOImpl" />
+	<bean id="productSizeDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEProductSizeDAOImpl" />
+	<bean id="productSizePriceHistoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEProductSizePriceHistoryDAOImpl" />
+	<bean id="setupDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESetupDAOImpl" />
+	<bean id="stateDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEStateDAOImpl" />
+	<bean id="stockConsolidationDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEStockConsolidationDAOImpl" />
+	<bean id="supplierCategoryDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESupplierCategoryDAOImpl" />
+	<bean id="supplierDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESupplierDAOImpl" />
+	<bean id="supplierUserDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESupplierUserDAOImpl" />
+	<bean id="supplierFranchisorDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESupplierFranchisorDAOImpl" />
+	<bean id="reviewRequestDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEReviewRequestDAOImpl" />
+	<bean id="systemConfigurationDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAESystemConfigurationDAOImpl" />
+	<bean id="timeRangeReportDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAETimeRangeReportDAOImpl" />
+	<bean id="tutorialDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAETutorialDAOImpl" />
+	<bean id="trainingDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAETrainingDAOImpl" />
+	<bean id="trainingViewControlDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAETrainingViewControlDAOImpl" />
+	<bean id="uploadedFileDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEUploadedFileDAOImpl" />
+	<bean id="userDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEUserDAOImpl" />
+	<bean id="userGroupDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEUserGroupDAOImpl" />
+	<bean id="userGroupEntityUserDAO" class="br.com.usasistemas.usaplatform.dao.impl.GAEUserGroupEntityUserDAOImpl" />
+	
+</beans>

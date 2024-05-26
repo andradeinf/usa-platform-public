@@ -1,0 +1,17 @@
+angular
+    .module(
+        'franchisorLogistics', 
+        [
+            'ngRoute',
+            'textAngular',
+            'ui.bootstrap',
+            'angular.filter',
+            'angular-toArrayFilter',
+            'angular-google-analytics',
+            'youtube-embed',
+            'ngSanitize',
+            'com.2fdevs.videogular',
+            'com.2fdevs.videogular.plugins.controls',
+            'ui.sortable'
+        ]
+    );

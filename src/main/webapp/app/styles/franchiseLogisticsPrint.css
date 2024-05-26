@@ -1,0 +1,56 @@
+.container {
+	padding: 15px;
+}
+
+.franchisee-details {
+	border: solid 1px #000;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.franchisee-details > ul > li {
+	list-style: none;
+}
+
+.franchisee-details > h2 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.delivery-title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.delivery-requests {
+	border: solid 1px #000;
+	width: 100%
+}
+
+.delivery-requests .total {
+	text-align: right;
+	font-weight: bold;
+}
+
+.delivery-requests th {
+	border: solid 1px #000;
+	padding: 5px;
+	text-align: center;
+}
+
+.delivery-requests td {
+	border: solid 1px #000;
+	padding: 5px;
+}
+
+.print-bar {
+	margin-bottom: 15px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
